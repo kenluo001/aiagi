@@ -2,13 +2,14 @@
 Author: error: git config user.name & please set dead value or install git
 Email: error: git config user.email & please set dead value or install git
 Date: 2025-02-25 18:35:09
-FilePath: /aiagi/AI/test copy.py
+FilePath: /aiagi/AI/deepseek2.py
 '''
 from openai import OpenAI
+import config
 
 client = OpenAI(
     base_url="https://api.deepseek.com/",
-    api_key="sk-f0de4496937d4a53925e031013e24c16"
+    api_key=config.config_data['api_key']
 )
 
 completion = client.chat.completions.create(
